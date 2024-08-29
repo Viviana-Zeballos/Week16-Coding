@@ -94,3 +94,46 @@ body {
 .add-card-form button:hover {
   background-color: #0056b3;
 }
+
+/* styling for edit */
+
+.edit-card-form {
+  margin-top: 20px;
+}
+
+.edit-card-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.edit-card-form input {
+  display: block;
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-card-form button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-card-form button:hover {
+  background-color: #0056b3;
+}
+
+.edit-card-form button:last-child {
+  background-color: #ccc;
+  color: black;
+  margin-left: 10px;
+}
+
+.edit-card-form button:last-child:hover {
+  background-color: #aaa;
+}
