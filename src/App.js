@@ -1,16 +1,22 @@
 import React from 'react';
-import './App.css';
-import { Button } from 'react-bootstrap';
-import Header from './Components/Header'
-import Journal from './Components/Journal';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header';
+import HomePage from './Components/HomePage';  // Ensure this path is correct
+import InspirationPage from './Components/InspirationPage';  // Updated component for cards
+import AgenciesPage from './Components/AgenciesPage';  // Ensure this path is correct
+import GalleryPage from './Components/GalleryPage';  // Ensure this path is correct
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      <Journal />
-      
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/inspiration" element={<InspirationPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/agencies" element={<AgenciesPage />} />
+      </Routes>
+    </Router>
   );
 }
 

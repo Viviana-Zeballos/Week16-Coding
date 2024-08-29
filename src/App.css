@@ -25,3 +25,39 @@ body {
   padding: 20px;
   border-radius: 10px;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 16px; /* Adjust the gap between cards */
+  padding: 16px; /* Add padding around the grid */
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 4px 0;
+}
+
+.card button {
+  background-color: rgb(237, 179, 237);
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #e60000;
+}
