@@ -61,3 +61,36 @@ body {
 .card button:hover {
   background-color: #e60000;
 }
+
+/* new card styling below */
+
+.add-card-form {
+  margin: 20px;
+}
+
+.add-card-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-card-form input {
+  display: block;
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-card-form button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-card-form button:hover {
+  background-color: #0056b3;
+}
