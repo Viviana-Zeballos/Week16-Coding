@@ -7,7 +7,7 @@ function Card({ data, deleteCard, startEdit }) {
       <h3>{data.City}</h3>
       <p>Month: {data.Month}</p>
       <p>Experience: {data.Experience}</p>
-      <button onClick={() => startEdit(data)}>Edit</button>
+      <button onClick={() => startEdit(data)}>Edit</button> <br/>
       <button onClick={() => deleteCard(data)}>Delete</button>
     </div>
   );

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../Card'; // Ensure the path is correct
-import '../App.css'; // Ensure to import CSS file
+import Card from '../Card';
+import '../App.css'; 
 
 const CARDS_ENDPOINT = 'https://66b9757dfa763ff550f86f25.mockapi.io/travel';
 
 function InspirationPage() {
   const [cards, setCards] = useState([]);
   const [newCard, setNewCard] = useState({
-    City: '',
+    State: '',
     Month: '',
     Experience: ''
   });
@@ -35,10 +35,10 @@ function InspirationPage() {
   const addNewCard = (event) => {
     event.preventDefault();
 
-    const { City, Month, Experience } = newCard;
+    const { State, Month, Experience } = newCard;
 
     // Basic validation
-    if (!City || !Month || !Experience) {
+    if (!State || !Month || !Experience) {
       alert('Please fill out all fields');
       return;
     }
@@ -49,7 +49,7 @@ function InspirationPage() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        City,
+        State,
         Month,
         Experience,
         id: Date.now().toString() // Using timestamp as a unique ID
@@ -58,7 +58,7 @@ function InspirationPage() {
     .then(res => res.json())
     .then(data => {
       setCards([...cards, data]);
-      setNewCard({ City: '', Month: '', Experience: '' }); // Clear form after submission
+      setNewCard({ State: '', Month: '', Experience: '' }); // Clear form after submission
     })
     .catch(error => console.error('Error adding card:', error));
   };
@@ -110,7 +110,6 @@ function InspirationPage() {
 
   return (
     <div>
-      <h1>Inspiration Page</h1>
       <div className="card-container">
         {cards.map((card) => (
           <Card
@@ -125,11 +124,11 @@ function InspirationPage() {
       <form onSubmit={addNewCard} className="add-card-form">
         <h2>Add New Card</h2>
         <label>
-          City:
+          State:
           <input
             type="text"
-            name="City"
-            value={newCard.City}
+            name="State"
+            value={newCard.State}
             onChange={handleChange}
           />
         </label>
@@ -158,11 +157,11 @@ function InspirationPage() {
         <form onSubmit={updateCard} className="edit-card-form">
           <h2>Update Card</h2>
           <label>
-            City:
+            State:
             <input
               type="text"
-              name="City"
-              value={editingCard.City || ''}
+              name="State"
+              value={editingCard.State || ''}
               onChange={handleEditChange}
             />
           </label>

@@ -1,0 +1,25 @@
+.agency-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .agency-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .agency-card h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+  }
+  
+  .agency-card p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
