@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../Card';
+import Card from '../Components/Card';
 import '../App.css'; 
 
 const CARDS_ENDPOINT = 'https://66b9757dfa763ff550f86f25.mockapi.io/travel';

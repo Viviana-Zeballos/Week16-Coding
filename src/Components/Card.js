@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Ensure you have a CSS file for styling
+import '../App.css'; 
 
 function Card({ data, deleteCard, startEdit }) {
   return (

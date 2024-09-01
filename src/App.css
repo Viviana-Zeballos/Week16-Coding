@@ -3,19 +3,6 @@ h4 {
   text-decoration: solid;
 }
 
-.Journal-Container {
-  background-color: rgb(0, 208, 255);
-  width: fit-content;
-  padding: 20px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  border-color: rgb(222, 221, 221);
-  border: 0.5px solid;
-}
-
 body {
   background-color: aliceblue;
 }

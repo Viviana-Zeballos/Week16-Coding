@@ -14,6 +14,7 @@ function Header() {
           <Nav.Link as={Link} to="/gallery" className="fs-5">Gallery</Nav.Link>
           <Nav.Link as={Link} to="/agencies" className="fs-5">Agencies</Nav.Link>
         </Nav>
+        <Navbar.Brand as={Link} to="/login" className="fs-5">Log in</Navbar.Brand>
       </Container>
     </Navbar>
   );

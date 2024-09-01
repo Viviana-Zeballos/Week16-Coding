@@ -5,6 +5,7 @@ import HomePage from './Components/HomePage';  // Ensure this path is correct
 import InspirationPage from './Components/InspirationPage';  // Updated component for cards
 import AgenciesPage from './Components/AgenciesPage';  // Ensure this path is correct
 import GalleryPage from './Components/GalleryPage';  // Ensure this path is correct
+import LoginPage from './Components/LoginPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/inspiration" element={<InspirationPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/agencies" element={<AgenciesPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

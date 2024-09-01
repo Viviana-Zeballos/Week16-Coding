@@ -1,0 +1,110 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  gap: 20px; /* Space between items */
+  padding: 20px; /* Optional: Space around the container */
+}
+
+/* Optional: Style for flex items if needed */
+.flex-item {
+  display: flex;
+  flex: 1; /* Allow items to grow equally */
+  gap: 100px;
+  background-color: #f9f9f9; /* Background color for visibility */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  border: 1px solid black; 
+}
+
+
+  .Before-Journal-Container {
+    background-color: rgb(178, 235, 248);
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: rgb(222, 221, 221);
+    border: 0.5px solid;
+    margin-top: 10px; /* Margin for spacing */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Before-Journal-Container input[type="text"],
+  .Before-Journal-Container textarea {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+    border-radius: 10px;
+    border: 1px solid black; 
+  }
+  
+  .Before-Journal-Container textarea {
+    height: 265px;
+  }
+  
+  .Return-Journal-Container {
+    background-color: #fcd0fc;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: rgb(222, 221, 221);
+    border: 0.5px solid;
+    margin-top: 10px; /* Margin for spacing */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Return-Journal-Container input[type="text"],
+  .Return-Journal-Container textarea {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+    border-radius: 10px;
+    border: 1px solid black; 
+  }
+  
+  .Return-Journal-Container textarea {
+    height: 265px;
+  }
+  
+  .Connect-Journal-Container {
+    background-color: rgb(178, 235, 248);
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: rgb(222, 221, 221);
+    border: 0.5px solid;
+    margin-top: 10px; /* Margin for spacing */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Connect-Journal-Container input[type="text"],
+  .Connect-Journal-Container textarea {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+    border-radius: 10px;
+    border: 1px solid black; 
+  }
+  
+  .Connect-Journal-Container textarea {
+    height: 300px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  #button {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+    border-radius: 10px;
+    border: 1px solid black; 
+  }
