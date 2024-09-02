@@ -3,24 +3,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS-Styles/Journal.css";
 
 function BeforeJournal() {
-  // State to hold packing journal entries
+
   const [entries, setEntries] = useState([]);
-  // State to hold current input values
-  const [category, setcategory] = useState("");
+  const [category, setCategory] = useState("");
   const [packing, setPacking] = useState("");
 
-  // Handle form submission
+  // Handles form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create a new entry
+    // Creates a new entry
     const newEntry = {
       category,
       packing,
     };
-    // Update the entries state with the new entry
+    // Updates the entries state with the new entry
     setEntries([...entries, newEntry]);
-    // Clear the input fields
-    setcategory("");
+    // Clears the input fields
+    setCategory("");
     setPacking("");
   };
 
@@ -28,13 +27,13 @@ function BeforeJournal() {
     <div className="before-page-container">
     <div className="Before-Journal-Container">
       <form onSubmit={handleSubmit}>
-        <h4>Packing List...</h4>
+        <h3>Packing List...</h3>
         <label htmlFor="categoryInput">Category:</label>
         <input
           type="text"
           id="categoryInput"
           value={category}
-          onChange={(e) => setcategory(e.target.value)}
+          onChange={(e) => setCategory(e.target.value)}
           required
         /> <br/> <br/>
         <label htmlFor="packingInput">Packing:</label>
@@ -43,10 +42,10 @@ function BeforeJournal() {
           rows="10" 
           columns="20"
           value={packing}
-          onChange={(e) => setPacking(e.target.value)}
+          onChange={(e) => setPacking(e.target.value)} // Updates state on change
           required
         ></textarea>
-        <br />
+        <br /> <br/>
         <input id="button" type="submit" value="Submit" />
         <br/> <br/>
       </form>

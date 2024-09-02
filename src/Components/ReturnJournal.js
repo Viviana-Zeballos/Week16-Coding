@@ -3,23 +3,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 function ReturnJournal() {
-  // State to hold journal entries
+
   const [entries, setEntries] = useState([]);
-  // State to hold current input values
   const [location, setLocation] = useState("");
   const [journalText, setJournalText] = useState("");
 
-  // Handle form submission
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create a new entry
+
     const newEntry = {
       location,
       text: journalText,
     };
-    // Update the entries state with the new entry
+
     setEntries([...entries, newEntry]);
-    // Clear the input fields 
+
     setLocation("");
     setJournalText("");
   };
@@ -28,7 +27,7 @@ function ReturnJournal() {
     <div className="return-page-container">
       <div className="Return-Journal-Container">
         <form onSubmit={handleSubmit}>
-          <h4>Returning from...</h4>
+          <h3>Returning from...</h3>
           <label>Location:</label> <br />
           <input
             type="text"
@@ -45,7 +44,7 @@ function ReturnJournal() {
             onChange={(e) => setJournalText(e.target.value)}
             required
           ></textarea>
-          <br />
+          <br /> <br/>
           <input id="button" type="submit" value="Submit" /> <br/> <br/>
         </form>
 

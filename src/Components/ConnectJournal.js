@@ -3,27 +3,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
 function ConnectJournal() {
-  // State to hold journal entries
+
   const [entries, setEntries] = useState([]);
-  // State to hold current input values
+
   const [name, setName] = useState("");
   const [instagram, setInstagram] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create a new entry
+
     const newEntry = {
       name,
       instagram,
       phoneNumber,
       email,
     };
-    // Update the entries state with the new entry
+
     setEntries([...entries, newEntry]);
-    // Clear the input fields 
+
     setName("");
     setInstagram("");
     setPhoneNumber("");
@@ -34,7 +33,7 @@ function ConnectJournal() {
     <div className="Connect-page-container">
       <div className="Connect-Journal-Container">
         <form onSubmit={handleSubmit}>
-          <h4>Stay In Touch!</h4>
+          <h3>Stay In Touch!</h3>
           <label>Name:</label> <br />
           <input
             type="text"

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "../CSS-Styles/Login.css";
 
-// here I added state variables in the function
+
 function Login(){
     const [username, setUserName] = useState("")
     const [password, setPassword] = useState("")

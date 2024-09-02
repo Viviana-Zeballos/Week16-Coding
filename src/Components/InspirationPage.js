@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../Components/Card';
-import '../App.css'; 
+import "../CSS-Styles/Card.css";
 
 const CARDS_ENDPOINT = 'https://66b9757dfa763ff550f86f25.mockapi.io/travel';
 
 function InspirationPage() {
+  // State to store fetched cards and form data for new/edit cards
   const [cards, setCards] = useState([]);
   const [newCard, setNewCard] = useState({
     State: '',
     Month: '',
     Experience: ''
   });
-  const [editingCard, setEditingCard] = useState(null); // State for the card being edited
+  const [editingCard, setEditingCard] = useState(null); 
 
+// Fetch cards from the API on component mount
   useEffect(() => {
     fetch(CARDS_ENDPOINT)
       .then(res => res.json())
@@ -22,6 +24,7 @@ function InspirationPage() {
       .catch(error => console.error('Error fetching cards:', error));
   }, []);
 
+    // Deletes a card by making a DELETE request
   const deleteCard = (card) => {
     fetch(`${CARDS_ENDPOINT}/${card.id}`, {
       method: 'DELETE'
@@ -32,6 +35,7 @@ function InspirationPage() {
     .catch(error => console.error('Error deleting card:', error));
   };
 
+    // Adds a new card after validating form data
   const addNewCard = (event) => {
     event.preventDefault();
 
@@ -52,13 +56,13 @@ function InspirationPage() {
         State,
         Month,
         Experience,
-        id: Date.now().toString() // Using timestamp as a unique ID
+        id: Date.now().toString() 
       })
     })
     .then(res => res.json())
     .then(data => {
       setCards([...cards, data]);
-      setNewCard({ State: '', Month: '', Experience: '' }); // Clear form after submission
+      setNewCard({ State: '', Month: '', Experience: '' }); 
     })
     .catch(error => console.error('Error adding card:', error));
   };
@@ -73,19 +77,17 @@ function InspirationPage() {
 
   const handleEditChange = (event) => {
     const { name, value } = event.target;
-    console.log('Edit change:', name, value); // Debug log
     setEditingCard(prevState => ({
       ...prevState,
       [name]: value
     }));
   };
 
+    // Updates an existing card with new data
   const updateCard = (event) => {
     event.preventDefault();
 
     if (!editingCard || !editingCard.id) return;
-
-    console.log('Updating card:', editingCard); // Debug log
 
     fetch(`${CARDS_ENDPOINT}/${editingCard.id}`, {
       method: 'PUT',
@@ -96,16 +98,15 @@ function InspirationPage() {
     })
     .then(res => res.json())
     .then(data => {
-      console.log('Updated card data:', data); // Debug log
       setCards(cards.map(c => c.id === data.id ? data : c));
-      setEditingCard(null); // Clear editing card after update
+      setEditingCard(null);
     })
     .catch(error => console.error('Error updating card:', error));
   };
 
+  // spread operator is important to trigger re-renders
   const startEdit = (card) => {
-    console.log('Editing card:', card); // Debug log
-    setEditingCard({ ...card });
+    setEditingCard({ ...card });  
   };
 
   return (
